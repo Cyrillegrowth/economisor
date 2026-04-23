@@ -1,0 +1,27 @@
+# Environnement
+.env
+*.env
+!reductor.env.example
+
+# Dépendances
+node_modules/
+__pycache__/
+*.pyc
+*.pyo
+
+# Licences & clés (sécurité)
+*.txt
+!README.md
+
+# Cache Economisor
+.reductor-cache/
+*.cache
+
+# IDE
+.vscode/
+.idea/
+*.swp
+
+# OS
+.DS_Store
+Thumbs.db

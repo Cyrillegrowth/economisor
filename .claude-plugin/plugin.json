@@ -1,0 +1,60 @@
+{
+  "name": "economisor",
+  "version": "1.0.0",
+  "description": "Optimisation tokens pour Claude Code — compression intelligente, cache LLM, routage multi-provider via REDUCTOR",
+  "author": "Novaquantic",
+  "homepage": "https://novaquantic.fr",
+  "license": "Proprietary",
+  "type": "claude-code-plugin",
+  "entry": "../economisor.py",
+  "capabilities": [
+    "token-compression",
+    "llm-routing",
+    "cache-management",
+    "cost-tracking"
+  ],
+  "commands": [
+    {
+      "name": "economisor:status",
+      "description": "Affiche le statut de la licence et les métriques d'optimisation",
+      "script": "python economisor.py status"
+    },
+    {
+      "name": "economisor:compress",
+      "description": "Compresse le contexte courant pour réduire les tokens",
+      "script": "python economisor.py compress"
+    },
+    {
+      "name": "economisor:reset",
+      "description": "Réinitialise le cache et les métriques",
+      "script": "python economisor.py reset"
+    }
+  ],
+  "mcp": {
+    "server": "economisor-mcp",
+    "transport": "stdio",
+    "command": "python",
+    "args": ["economisor.py", "--mcp"]
+  },
+  "settings": {
+    "licenseKey": {
+      "type": "string",
+      "description": "Clé de licence Economisor (Starter / Pro / Ultimate)",
+      "required": true
+    },
+    "reductorUrl": {
+      "type": "string",
+      "description": "URL du gateway REDUCTOR",
+      "default": "http://localhost:3000"
+    },
+    "compressionMode": {
+      "type": "string",
+      "enum": ["none", "light", "aggressive"],
+      "default": "light",
+      "description": "Mode de compression des tokens"
+    }
+  },
+  "engines": {
+    "claude-code": ">=1.0.0"
+  }
+}

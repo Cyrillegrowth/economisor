@@ -1,0 +1,79 @@
+{
+  "name": "economisor",
+  "version": "1.0.0",
+  "description": "Optimisation tokens pour Cursor — compression intelligente, cache LLM, routage multi-provider via REDUCTOR",
+  "author": "Novaquantic",
+  "homepage": "https://novaquantic.fr",
+  "license": "Proprietary",
+  "type": "cursor-plugin",
+  "displayName": "Economisor — Token Optimizer",
+  "icon": "assets/icon.png",
+  "categories": ["AI", "Productivity", "LLM"],
+  "entry": "../economisor.py",
+  "capabilities": [
+    "token-compression",
+    "llm-routing",
+    "cache-management",
+    "cost-tracking",
+    "multi-provider"
+  ],
+  "contributes": {
+    "commands": [
+      {
+        "command": "economisor.status",
+        "title": "Economisor: Statut & Métriques",
+        "description": "Affiche le statut de la licence et les métriques d'optimisation"
+      },
+      {
+        "command": "economisor.compress",
+        "title": "Economisor: Compresser le contexte",
+        "description": "Réduit les tokens du contexte courant"
+      },
+      {
+        "command": "economisor.switchProvider",
+        "title": "Economisor: Changer de provider LLM",
+        "description": "Bascule entre Ollama, NIM, OpenAI via REDUCTOR"
+      },
+      {
+        "command": "economisor.resetMetrics",
+        "title": "Economisor: Réinitialiser les métriques",
+        "description": "Remet à zéro le cache et les compteurs"
+      }
+    ],
+    "configuration": {
+      "title": "Economisor",
+      "properties": {
+        "economisor.licenseKey": {
+          "type": "string",
+          "description": "Clé de licence Economisor (Starter / Pro / Ultimate)"
+        },
+        "economisor.reductorUrl": {
+          "type": "string",
+          "default": "http://localhost:3000",
+          "description": "URL du gateway REDUCTOR"
+        },
+        "economisor.compressionMode": {
+          "type": "string",
+          "enum": ["none", "light", "aggressive"],
+          "default": "light",
+          "description": "Mode de compression des tokens"
+        },
+        "economisor.preferredProvider": {
+          "type": "string",
+          "enum": ["ollama", "nim", "openai", "auto"],
+          "default": "auto",
+          "description": "Provider LLM préféré"
+        }
+      }
+    }
+  },
+  "scripts": {
+    "start": "python ../economisor.py --server",
+    "status": "python ../economisor.py status",
+    "compress": "python ../economisor.py compress"
+  },
+  "engines": {
+    "cursor": ">=0.40.0",
+    "vscode": ">=1.85.0"
+  }
+}
