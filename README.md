@@ -113,13 +113,11 @@ Vos économies en temps réel. Par session. Par provider. Par modèle.
 | Tier | Compression | Providers | Dashboard | Prix |
 |------|-------------|-----------|-----------|------|
 | **FREE** | 75% | Ollama only | Basique | **Gratuit** |
-| **STARTER** | 86% | +OpenAI | Standard | **29€ lifetime** |
-| **PRO** | 96% | +NIM +Anthropic | Avancé | **39€ lifetime** |
-| **ULTIMATE** | **99%** | Tous | Complet + API | **49€ lifetime** |
+| **STARTER** | 86% | +OpenAI | Standard | **29€/mois** |
+| **PRO** | 96% | +NIM +Anthropic | Avancé | **39€/mois** |
+| **ULTIMATE** | **99%** | Tous | Complet + API | **49€/mois** |
 
-**Lifetime = payez une fois, économisez pour toujours.**
-
-> À 49€, si vous dépensez plus de 2€/mois en tokens IA, ECONOMISOR est rentabilisé en 25 jours.
+> À 49€/mois, si vous dépensez plus de 2€/mois en tokens IA, ECONOMISOR est rentabilisé en 25 jours.
 
 ---
 
