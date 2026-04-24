@@ -164,7 +164,7 @@ VOTRE IDE (Claude Code / Cursor / Codex)
 
 ## Support
 
-- Email : cyrille@novaquantic.fr
+- Email : lyra.cyrillegrowth@gmail.com
 - GitHub : github.com/novaquantic/economisor
 
 ---
