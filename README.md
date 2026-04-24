@@ -6,7 +6,7 @@
 
 [![ROI](https://img.shields.io/badge/ROI-43x-gold?style=for-the-badge&logo=trending-up)](#)
 [![Tokens saved](https://img.shields.io/badge/Tokens%20saved-up%20to%2099%25-brightgreen?style=for-the-badge)](#)
-[![License](https://img.shields.io/badge/License-Lifetime-black?style=for-the-badge)](#tarifs)
+[![License](https://img.shields.io/badge/License-/MOIS-black?style=for-the-badge)](#tarifs)
 [![By Novaquantic](https://img.shields.io/badge/By-Novaquantic-gold?style=for-the-badge)](#)
 
 **Compatible :**
@@ -154,7 +154,6 @@ VOTRE IDE (Claude Code / Cursor / Codex)
 | `economisor.py` | Moteur principal MCP |
 | `reductor.js` | Gateway multi-provider |
 | `codeburn_pro.js` | Dashboard coûts |
-| `licence.py` | Système de licences |
 | `LANCER_ECONOMISOR_.bat` | Démarrage 1 clic (Windows) |
 | `.claude-plugin/plugin.json` | Intégration Claude Code |
 | `.cursor-plugin/plugin.json` | Intégration Cursor |
