@@ -1,19 +1,51 @@
 <!doctype html>
-<html>
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<title>My static Space</title>
-		<link rel="stylesheet" href="style.css" />
-	</head>
-	<body>
-		<div class="card">
-			<h1>Welcome to your static Space!</h1>
-			<p>You can modify this app directly by editing <i>index.html</i> in the Files and versions tab.</p>
-			<p>
-				Also don't forget to check the
-				<a href="https://huggingface.co/docs/hub/spaces" target="_blank">Spaces documentation</a>.
-			</p>
-		</div>
-	</body>
+
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width"/>
+<title>ECONOMISOR — MCP Token Optimizer</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#0a0a0a;color:#fff;font-family:system-ui,sans-serif;min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:2rem}
+.badge{background:#1a1a1a;border:1px solid #333;border-radius:20px;padding:.3rem 1rem;font-size:.8rem;color:#888;margin-bottom:1.5rem}
+h1{font-size:2.5rem;font-weight:800;margin-bottom:.5rem}
+h1 span{color:#f5c518}
+.sub{color:#aaa;font-size:1.1rem;margin-bottom:2.5rem;text-align:center}
+.stats{display:flex;gap:2rem;margin-bottom:2.5rem;flex-wrap:wrap;justify-content:center}
+.stat{background:#111;border:1px solid #222;border-radius:12px;padding:1.2rem 2rem;text-align:center}
+.stat .n{font-size:2rem;font-weight:800;color:#f5c518}
+.stat .l{font-size:.8rem;color:#666;margin-top:.2rem}
+.tiers{display:flex;gap:1rem;margin-bottom:2.5rem;flex-wrap:wrap;justify-content:center}
+.tier{background:#111;border:1px solid #222;border-radius:12px;padding:1rem 1.5rem;text-align:center;min-width:140px}
+.tier .name{font-weight:700;margin-bottom:.3rem}
+.tier .pct{font-size:1.5rem;font-weight:800;color:#4ade80}
+.tier .price{font-size:.85rem;color:#888;margin-top:.3rem}
+.free .pct{color:#60a5fa}
+.links{display:flex;gap:1rem;flex-wrap:wrap;justify-content:center}
+a.btn{padding:.7rem 1.5rem;border-radius:8px;text-decoration:none;font-weight:600;font-size:.95rem}
+.gh{background:#fff;color:#000}
+.gum{background:#f5c518;color:#000}
+</style>
+</head>
+<body>
+<div class="badge">MCP Gateway · Token Optimizer · Local AI</div>
+<h1>ECONO<span>MISOR</span></h1>
+<p class="sub">Compress tokens · Cache responses · Route to cheapest provider<br>Works with Claude Code, Cursor, Codex — any MCP tool</p>
+<div class="stats">
+<div class="stat"><div class="n">118M</div><div class="l">Tokens processed</div></div>
+<div class="stat"><div class="n">712€</div><div class="l">Saved this month</div></div>
+<div class="stat"><div class="n">43x</div><div class="l">ROI</div></div>
+</div>
+<div class="tiers">
+<div class="tier free"><div class="name">FREE</div><div class="pct">75%</div><div class="price">0€ — Ollama local</div></div>
+<div class="tier"><div class="name">STARTER</div><div class="pct">86%</div><div class="price">29€/mo</div></div>
+<div class="tier"><div class="name">PRO</div><div class="pct">96%</div><div class="price">39€/mo</div></div>
+<div class="tier"><div class="name">ULTIMATE</div><div class="pct">99%</div><div class="price">49€/mo</div></div>
+</div>
+<div class="links">
+<a class="btn gh" href="https://github.com/Cyrillegrowth/economisor" target="_blank">⭐ GitHub</a>
+<a class="btn gum" href="https://lyracyril.gumroad.com/l/lowhff" target="_blank">Buy on Gumroad</a>
+</div>
+</body>
 </html>
