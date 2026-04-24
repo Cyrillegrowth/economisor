@@ -178,6 +178,6 @@ VOTRE IDE (Claude Code / Cursor / Codex)
 
 **ECONOMISOR V1 — Novaquantic SAS — Gruissan, Occitanie, France**
 
-*"Payez une fois. Économisez sur chaque IA pour toujours."*
+*""ROI 43x dès le premier mois. À 29€/mois, rentabilisé en 24h.""*
 
 </div>
