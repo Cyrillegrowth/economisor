@@ -63,10 +63,20 @@ if errorlevel 1 (
 )
 
 echo [2/5] Demarrage REDUCTOR port 8787...
-set OPENAI_API_KEY=OPENAI_KEY_REMOVED
-set NIM_API_KEY=NIM_KEY_REMOVED
-set NIM_BASE_URL=https://integrate.api.nvidia.com/v1
-set DEFAULT_NIM_MODEL=glm-4.7-instruct
+if exist "%DOSSIER%.env" (
+    for /f "usebackq tokens=1,* delims==" %%A in ("%DOSSIER%.env") do (
+        if "%%A"=="OPENAI_API_KEY" set OPENAI_API_KEY=%%B
+        if "%%A"=="NIM_API_KEY" set NIM_API_KEY=%%B
+        if "%%A"=="NIM_BASE_URL" set NIM_BASE_URL=%%B
+        if "%%A"=="DEFAULT_NIM_MODEL" set DEFAULT_NIM_MODEL=%%B
+    )
+    echo       OK - Cles chargees depuis .env
+) else (
+    echo       ATTENTION - Fichier .env introuvable
+    echo       Copie reductor.env.example en .env et ajoute tes cles API
+    pause
+    exit /b 1
+)
 netstat -ano | findstr ":8787" >nul 2>&1
 if errorlevel 1 (
     start "REDUCTOR" cmd /k "cd /d %DOSSIER% && node reductor.js"

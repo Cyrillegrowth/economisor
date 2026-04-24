@@ -12,6 +12,7 @@ __pycache__/
 # Licences & clés (sécurité)
 *.txt
 !README.md
+licence.py
 
 # Cache Economisor
 .reductor-cache/
