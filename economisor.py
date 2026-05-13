@@ -290,7 +290,7 @@ def smart_search(query: str, repo: str, limit: int = 5) -> dict:
 
     # Niveau 3 : recherche texte si toujours vide
     if not results:
-        r3 = search_text_tool(query=query, repo=repo, limit=limit)
+        r3 = search_text_tool(query=query, repo=repo)
         if r3.get("matches"):
             results = r3["matches"]
             method_used = "text"
@@ -503,6 +503,20 @@ def index_project(path: str, name: str | None = None) -> dict:
     start = time.time()
     result = _symdex_index(path, name=name)
     elapsed = round(time.time() - start, 2)
+
+    # Enregistrer le repo dans le registre central (fix: was missing)
+    try:
+        from symdex.core.storage import _get_registry_connection, get_db_path
+        reg = _get_registry_connection()
+        reg.execute(
+            "INSERT OR REPLACE INTO repos (name, root_path, db_path, last_indexed) "
+            "VALUES (?, ?, ?, datetime('now'))",
+            (result.repo, os.path.abspath(path), get_db_path(result.repo))
+        )
+        reg.commit()
+        reg.close()
+    except Exception:
+        pass  # Non-bloquant
 
     # Générer le contexte automatiquement
     context = generate_context_file(repo=result.repo)
