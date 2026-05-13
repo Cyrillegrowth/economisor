@@ -54,7 +54,7 @@ ROI : 0x              →   ROI : 43x
 
 ```bash
 # Windows
-LANCER_ECONOMISOR_.bat
+LANCER_ECONOMISOR.bat
 
 # ou manuellement
 pip install fastapi uvicorn requests python-dotenv && node reductor.js
@@ -160,7 +160,7 @@ VOTRE IDE (Claude Code / Cursor / Codex)
 | `economisor.py` | Moteur principal MCP |
 | `reductor.js` | Gateway multi-provider |
 | `codeburn_pro.js` | Dashboard coûts |
-| `LANCER_ECONOMISOR_.bat` | Démarrage 1 clic (Windows) |
+| `LANCER_ECONOMISOR.bat` | Démarrage 1 clic (Windows) |
 | `.claude-plugin/plugin.json` | Intégration Claude Code |
 | `.cursor-plugin/plugin.json` | Intégration Cursor |
 | `.codex/INSTALL.md` | Guide installation complet |
