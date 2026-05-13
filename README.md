@@ -1,3 +1,13 @@
+---
+title: Economisor
+emoji: 🐨
+colorFrom: purple
+colorTo: yellow
+sdk: static
+pinned: false
+short_description: MCP gateway that compresses tokens, caches responses & route
+---
+
 # ⚡ ECONOMISOR — Token Optimizer Universal
 
 <div align="center">
